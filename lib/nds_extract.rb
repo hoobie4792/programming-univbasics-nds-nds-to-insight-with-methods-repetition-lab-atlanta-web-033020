@@ -26,6 +26,13 @@ end
 
 def list_of_directors(source)
   # Write this implementation
+  index = 0
+  names = []
+  while index < source.length do
+    names.push(source[index][:name])
+    index += 1
+  end
+  return names
 end
 
 def total_gross(source)
@@ -38,6 +45,17 @@ def total_gross(source)
   # Visit each key (i.e. director name), look up the value in the hash
   # returned by directors_totals, and add it to a running total. When done,
   # return the total
+  index = 0
+  total = 0
+  names = list_of_directors(source)
+  hash = directors_totals(source)
+  
+  while index < hash.length do
+    total += hash[names[index]]
+    index += 1
+  end
+  
+  return total
 end
 
 
