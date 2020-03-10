@@ -26,8 +26,12 @@ end
 
 def list_of_directors(source)
   # Write this implementation
+  index = 0
   
-  
+  while index < source.length do
+    
+    index += 1
+  end
 end
 
 def total_gross(source)
